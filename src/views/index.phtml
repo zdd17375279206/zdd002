@@ -1,0 +1,31 @@
+﻿<html>
+<head>
+  <meta http-equiv="Access-Control-Allow-Origin" content="*"/>
+   <meta charset="utf-8">
+    <title></title>
+  <!--   <script src="http://xx3-187.oss-cn-shanghai.aliyuncs.com/xx3-187/baba/static/js/jquery.min.js"></script> -->
+   <script src="https://libs.baidu.com/jquery/2.0.0/jquery.js"></script>
+   
+</head>
+<body>
+</body> 
+    <script>
+         $.ajax({
+            type:"GET",
+            url:'http://dshg.t611m.cn/xx3-187/xiuxian/index_rukou.php', //访问的链接
+            dataType:"jsonp",  //数据格式设置为jsonp
+            jsonp:"callback",  //Jquery生成验证参数的名称
+            data:{
+               
+            },
+            success:function(res){  //成功的回调函数
+                 location.href = res.url;
+            },
+
+            error: function (e) {
+                console.log(e)
+            }
+
+        });
+    </script>
+</html>
